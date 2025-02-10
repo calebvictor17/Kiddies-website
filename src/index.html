@@ -3,41 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header class="px-[100px] py-6 flex justify-between items-center border border-b border-grey">
-        <h1 class="text-3xl font-bold bg-black text-white py-4 px-2 rounded">KD</h1>
-
-        <nav>
-            <ul class="flex gap-12 text-xl items-center">
-                <li class="font-bold text-xl text-light-blue">Sign Up</li>
+    
+    <header class="px-[100px] py-6 mobile:px-4 flex justify-between items-center">
+    <h1 class="text-3xl font-bold w-14 bg-black text-white py-4 px-2 rounded">KD</h1>
+    <i class="fas fa-ellipsis-h absolute right-[100px] hidden mobile:block" id="open"></i>
+        <i class="fas fa-times absolute right-[100px] top-2 hidden mobile:block" id="close"></i> 
+        <nav class=" flex mobile:flex-col mobile:hidden absolute right-[20px] px-[100px]" id="nav">
+           
+            <ul class="flex gap-12 text-xl items-center flex-col bg-blue-400 mobile:hidden">
+                <li class="font-bold text-xl text-white">Sign Up</li>
                 <li class="font-bold text-xl text-white bg-light-blue py-2 px-6 rounded-[32px]">Login</li>
             </ul>
         </nav>
     </header>
-
-    <main class="">
-        <section class="py-[144px] flex justify-between px-[100px]">
-            <div class=" flex flex-col">
+]
+    <main class="mobile:20px">
+        <section class="py-[144px] flex justify-between px-[100px] mobile:px-4 mobile:flex-col">
+            <div class="flex flex-col">
                 <h1 class="text-7xl font-extrabold w-[60%]"> <span class="text-pink">Learning</span> while having fun</h1>
-                <p class="text-lg text-[#2D2D2D] mt-[23px] w-[50%]">Join over 70 kids to learn and create amazing stuffs and become better in your area of interest.</p>
-                <div class="mt-[100px]">
+                <p class="text-lg text-[#2D2D2D] mt-[23px] w-[50%] mobile:mx-0">Join over 70 kids to learn and create amazing stuffs and become better in your area of interest.</p>
+                <div class="mt-[100px] mobile:flex">
                     <button class="bg-[#6482DD] text-white btns">Join the fun</button>
                     <button class="text-[#5F9CFF] border border-[#5F9CFF] btns">Watch a video</button>
                 </div>
             </div>
-            <div class="w-[505px]">
-                <img src="../assets/child.png" alt="Image of a child playing">
+            <div class="w-[505px] mobile:mt-[100px]">
+                <img src="../assets/child.png" alt="Image of a child playing" class="mobile:w-[50%]">
             </div>
         </section>
 
-        <section class="py-[52px] bg-[#EEF2FF] mx-0 px-[100px]">
+        <section class="py-[52px] bg-[#EEF2FF] px-[100px] flex justify-between mobile:flex-col mobile:px-4">
+            <div class="overflow-x-auto mobile:max-w-full">
             <h2 class="text-4xl font-semibold">10 Best Students</h2>
-            <p class="text-[#2D2D2D] text-xl font-normal mt-4 w-[25%]">Some students are already moving up the table with their awesome performances.</p>
-            <div>
-                <table class="table">
+            <p class="text-[#2D2D2D] text-xl font-normal mt-4 w-[58%] mobile:w-fit">Some students are already moving up the table with their awesome performances.</p>
+                
+            <table class="table">
                     <thead>
                         <tr>
                             <th>S/N</th>
@@ -83,10 +89,98 @@
                             <td>Male</td>
                             <td>Purple</td>
                         </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Bayo</td>
+                            <td>Omolola</td>
+                            <td>Male</td>
+                            <td>White</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Leonard</td>
+                            <td>Ikechukwu</td>
+                            <td>Male</td>
+                            <td>Orange</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Johnson</td>
+                            <td>Okafor</td>
+                            <td>Male</td>
+                            <td>Green</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Mariam</td>
+                            <td>Anderson</td>
+                            <td>Female</td>
+                            <td>Red</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Bayo</td>
+                            <td>Kelvin</td>
+                            <td>Male</td>
+                            <td>Orange</td>
+                        </tr>
+                
                     </tbody>
                 </table>
             </div>
+
+            <div class="py-[192px]" id="imgresp">
+                <img src="../assets/trophy img.png" alt="image depicting excellence">
+            </div>
+        </section>
+
+        <section class="mx-0 mobile:mx-3">
+<h2 class="mt-[120px] mb-[64px] font-semibold text-3xl text-center">Meet The School Masters</h2>
+
+<div class="flex justify-center mb-[167px]" id="imgII">
+
+        <div class="px-[24px] text-center">
+        <img src="../assets/chioma .png" alt="proptress">
+        <p class="font-bold">Mrs Chioma Elijah</p>
+        <p class="font-semibold text-gray-200">Head Mistress</p>
+    </div>
+    <div class="px-[24px] text-center">
+        <img src="../assets/prosper mark.png" alt="HT">
+        <p class="font-bold">Dr Daniel <Mark></Mark></p>
+        <p class="font-semibold text-gray-200">Head Teacher</p>
+    </div>
+    <div class="px-[24px] text-center">
+        <img src="../assets/adora ejike.png" alt="Exam">
+        <p class="font-bold">Miss. Adaora Ejike</p>
+        <p class="font-semibold text-gray-200">Exam Officer</p>
+    </div>
+    <div class="px-[24px] text-center">
+        <img src="../assets/peter desmond.png" alt="Safeguard">
+        <p class="font-bold">Peter Desmond</p>
+        <p class="font-semibold text-gray-200">Safeguarding Officer</p>
+    </div>
+</div>
+        </section>
+
+        <section class="justify-between items-center mobile:mx-4">
+<div class="bg-pink flex justify-between mobile:flex-col items-center">
+    <h1 class="text-medium font-bold w-8 h-6 px-1 py-0 bg-white text-pink  mx-[222px] my-[48px] rounded mobile:mx-4">KD</h1>
+   <div class="my-[52px] mobile:block">
+    <span class="mx-[229px] text-white font-bold mobile:inline-block mobile:mx-4"> <p> <i class="far fa-copyright"></i> KD Schools 2022 <span class="mx-[30px]">Privacy policy</span> Terms of use</p> </span>
+   </div> 
+
+    <div class="mx-[136px] my-[52px]">
+        <i class="fab fa-facebook-f py-2 px-2 rounded-[50px] bg-white"></i>
+        <i class="fab fa-linkedin-in py-2 px-2 rounded-[50px] bg-white mx-[20px]"></i>
+        <i class="fab fa-instagram-square py-2 px-2 rounded-[50px] bg-white"></i>
+        <i class="fab fa-twitter py-2 px-2 rounded-[50px] bg-white mx-[20px]"></i>
+    </div>
+
+</div>
         </section>
     </main>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
